@@ -21,6 +21,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm install
+      - name: Install Karma
+        run: npm install -g karma
       - name: Run Automated Test
         run: |
           npm run test
