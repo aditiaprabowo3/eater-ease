@@ -21,9 +21,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm install
-      - name: Install Karma locally
-        run: npm install karma --save-dev
-      - name: Install Karma CLI
-        run: npm install -g karma-cli
+      - name: Install Karma and Karma CLI locally
+        run: npm install karma karma-cli --save-dev
       - name: Run Automated Test
-        run: karma start
+        run: npx karma start
