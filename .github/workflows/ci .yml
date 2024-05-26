@@ -22,6 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Add node_modules/.bin to PATH
-        run: echo '::add-path::$(npm bin)'
+        run: echo 'NODE_MODULES_BIN=$(npm bin)' >> $GITHUB_ENV
       - name: Run Karma tests
-        run: npx karma start  
+        run: npx karma start
+        env:
+          PATH: ${{ env.NODE_MODULES_BIN }}:$PATH
