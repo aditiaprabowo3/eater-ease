@@ -28,33 +28,23 @@ const LikeButtonPresenter = {
     },
 
     _renderLike() {
-        console.log('Rendering like button');
-        if (this._likeButtonContainer) {
-            this._likeButtonContainer.innerHTML = createLikeRestaurantButtonTemplate();
+        this._likeButtonContainer.innerHTML = createLikeRestaurantButtonTemplate();
 
-            const likeButton = document.querySelector('#likeButton');
-            likeButton.addEventListener('click', async() => {
-                await this._favoriteRestaurants.putRestaurant(this._restaurant);
-                this._renderButton();
-            });
-        } else {
-            console.error('Like button container is null');
-        }
+        const likeButton = document.querySelector('#likeButton');
+        likeButton.addEventListener('click', async() => {
+            await this._favoriteRestaurants.putRestaurant(this._restaurant);
+            this._renderButton();
+        });
     },
 
     _renderLiked() {
-        console.log('Rendering liked button');
-        if (this._likeButtonContainer) {
-            this._likeButtonContainer.innerHTML = createUnlikeRestaurantButtonTemplate();
+        this._likeButtonContainer.innerHTML = createUnlikeRestaurantButtonTemplate();
 
-            const likeButton = document.querySelector('#likeButton');
-            likeButton.addEventListener('click', async() => {
-                await this._favoriteRestaurants.deleteRestaurant(this._restaurant.id);
-                this._renderButton();
-            });
-        } else {
-            console.error('Like button container is null');
-        }
+        const likeButton = document.querySelector('#likeButton');
+        likeButton.addEventListener('click', async() => {
+            await this._favoriteRestaurants.deleteRestaurant(this._restaurant.id);
+            this._renderButton();
+        });
     },
 };
 

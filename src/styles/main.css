@@ -87,7 +87,7 @@ nav .nav-list li {
   font-weight: 600;
   background-color:  #F86060;
   border-radius: 14px;
-  color: var(--font-color);
+  color: #fff;
 }
 
 .hero .btn a:hover {
