@@ -21,13 +21,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm install
-      - name: Install Karma and dependencies
-        run: |
-          npm install karma karma-cli --save-dev
-          npm install chai@^4.1.2 ajv@^8.0.0 react@18.2.0 --save-dev
-      - name: Add node_modules/.bin to PATH
-        run: echo 'export PATH="$PATH:./node_modules/.bin"' >> $GITHUB_ENV
-      - name: Ensure Karma is installed
-        run: karma --version
-      - name: Run Karma tests
-        run: npm run test
+      - name: Run Jest tests
+        run: npm test
