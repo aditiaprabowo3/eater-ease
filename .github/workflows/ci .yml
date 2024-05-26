@@ -28,10 +28,10 @@ jobs:
           npm install ajv@^8.0.0
           npm install react@18.2.0
       - name: Add node_modules/.bin to PATH
-        run: echo 'NODE_MODULES_BIN=$(npm bin)' >> $GITHUB_ENV
+        run: echo 'PATH="$PATH:./node_modules/.bin"' >> $GITHUB_ENV
       - name: Ensure Karma is installed
         run: ls -l node_modules/.bin/
       - name: Run Karma tests
-        run: npx karma start
+        run: npm run test
         env:
-          PATH: ${{ env.NODE_MODULES_BIN }}:$PATH
+          PATH: ${{ env.PATH }}:./node_modules/.bin
