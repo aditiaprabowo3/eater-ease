@@ -21,17 +21,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm install
-      - name: Install peer dependencies
+      - name: Install Karma and dependencies
         run: |
-          npm install karma@^6.0.0
-          npm install chai@^4.1.2
-          npm install ajv@^8.0.0
-          npm install react@18.2.0
+          npm install karma karma-cli --save-dev
+          npm install chai@^4.1.2 ajv@^8.0.0 react@18.2.0 --save-dev
       - name: Add node_modules/.bin to PATH
-        run: echo 'PATH="$PATH:./node_modules/.bin"' >> $GITHUB_ENV
+        run: echo 'export PATH="$PATH:./node_modules/.bin"' >> $GITHUB_ENV
       - name: Ensure Karma is installed
-        run: ls -l node_modules/.bin/
+        run: karma --version
       - name: Run Karma tests
         run: npm run test
-        env:
-          PATH: ${{ env.PATH }}:./node_modules/.bin
