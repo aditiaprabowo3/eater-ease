@@ -1,3 +1,4 @@
+/* eslint-disable spaced-comment */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -7,7 +8,7 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const ImageminMozjpeg = require('imagemin-mozjpeg');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+//const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
     entry: {
@@ -15,7 +16,7 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
         clean: true,
     },
     module: {
@@ -128,6 +129,7 @@ module.exports = {
                 }),
             ],
         }),
-        new BundleAnalyzerPlugin(),
+        // eslint-disable-next-line spaced-comment
+        //new BundleAnalyzerPlugin(),
     ],
 };
