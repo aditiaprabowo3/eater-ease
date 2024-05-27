@@ -3,7 +3,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const TerserWebpackPlugin = require('terser-webpack-plugin');
@@ -78,10 +77,12 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
+
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: path.resolve(__dirname, 'src/templates/index.html'),
         }),
+
         new CopyWebpackPlugin({
             patterns: [{
                     from: path.resolve(__dirname, 'src/public/'),
@@ -93,6 +94,7 @@ module.exports = {
 
             ],
         }),
+
         new WorkboxWebpackPlugin.GenerateSW({
             swDest: 'sw.bundle.js',
             runtimeCaching: [{
@@ -118,9 +120,7 @@ module.exports = {
                 },
             ],
         }),
-        new FaviconsWebpackPlugin({
-            logo: path.resolve(__dirname, 'src/public/images/logo/brand-icon.png'),
-        }),
+
         new ImageminWebpackPlugin({
             plugins: [
                 ImageminMozjpeg({
@@ -128,6 +128,11 @@ module.exports = {
                     progressive: true,
                 }),
             ],
+            imageminOptions: {
+                plugins: [
+                    ['imagemin-maximum-compress', { max: 200 }],
+                ],
+            },
         }),
         // eslint-disable-next-line spaced-comment
         //new BundleAnalyzerPlugin(),
