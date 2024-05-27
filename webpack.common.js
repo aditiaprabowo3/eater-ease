@@ -5,7 +5,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
-const TerserWebpackPlugin = require('terser-webpack-plugin');
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 //const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
@@ -39,7 +38,16 @@ module.exports = {
                     },
                 ],
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/,
+                dependency: { not: ['url'] },
+                use: [{
+                        loader: 'file-loader',
+                    },
 
+                ],
+                type: 'javascript/auto',
+            },
         ],
     },
     optimization: {
@@ -64,16 +72,6 @@ module.exports = {
                 },
             },
         },
-        minimize: true,
-        minimizer: [
-            new TerserWebpackPlugin({
-                terserOptions: {
-                    compress: {
-                        drop_console: true,
-                    },
-                },
-            }),
-        ],
     },
     plugins: [
         new CleanWebpackPlugin(),
