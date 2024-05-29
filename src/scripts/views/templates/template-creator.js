@@ -99,8 +99,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
                         <source class="lazyload" media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL + small + restaurant.pictureId}">
                         <source class="lazyload" media="(max-width: 1200px)" data-srcset="${CONFIG.BASE_IMAGE_URL + medium + restaurant.pictureId}">
                         
-                        <!-- Gambar default jika browser tidak mendukung WebP -->
-                        <img class="lazyload" src="/images/placeholder.png" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + large + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="Restoran ${restaurant.name || '-'} Kota ${restaurant.city}">
+                        <img class="lazyload" crossorigin="anonymous" src="/images/placeholder.png" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + large + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="Restoran ${restaurant.name || '-'} Kota ${restaurant.city}">
                     </picture>
 
                     </div>
