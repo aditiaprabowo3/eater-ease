@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
     entry: {
@@ -14,7 +14,7 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
         clean: true,
     },
     module: {
@@ -84,7 +84,7 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [{
                     from: path.resolve(__dirname, 'src/public/'),
-                    to: path.resolve(__dirname, 'dist/'),
+                    to: path.resolve(__dirname, 'public/'),
                     globOptions: {
                         // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
                         ignore: ['**/images/heros/**'],
@@ -134,6 +134,6 @@ module.exports = {
             },
         }),
 
-        new BundleAnalyzerPlugin(),
+        //new BundleAnalyzerPlugin(),
     ],
 };
