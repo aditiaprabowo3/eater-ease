@@ -1,14 +1,18 @@
 import UrlParser from '../../routes/url-parser.js';
 import RestaurantDbSource from '../../data/restaurantdb-source.js';
 import postReview from '../../utils/addReview.js';
-import { createRestaurantDetailTemplate } from '../templates/template-creator.js';
 import LikeButtonInitiator from '../../utils/like-button-presenter.js';
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb.js';
+import {
+    createRestaurantDetailTemplate,
+    createSkeletonRestaurantDetail,
+} from '../templates/template-creator.js';
 
 const Detail = {
     async render() {
         return `
         <div class="detail-container">
+            ${createSkeletonRestaurantDetail()}
         </div>
       `;
     },

@@ -13,9 +13,6 @@ const Favorite = {
     async afterRender() {
         // Fungsi ini akan dipanggil setelah render()
         const restoList = document.querySelector('#card-resto');
-        // const hero = document.querySelector('hero-content');
-        // hero.style.display = 'none';
-
         restoList.style.marginTop = '110px';
         new FavoriteRestaurantShowPresenter({ view, favoriteRestaurants: FavoriteRestaurantIdb });
         new FavoriteRestaurantSearchPresenter({ view, favoriteRestaurants: FavoriteRestaurantIdb });

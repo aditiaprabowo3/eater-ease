@@ -1,5 +1,8 @@
 import RestaurantDbSource from '../../data/restaurantdb-source.js';
-import { createRestaurantListTemplate } from '../templates/template-creator.js';
+import {
+    createRestaurantListTemplate,
+    createSkeletonRestaurantTemplate,
+} from '../templates/template-creator.js';
 
 const Home = {
     // Fungsi render() digunakan untuk menghasilkan atau men-generate tampilan atau markup HTML dari suatu komponen.
@@ -11,7 +14,9 @@ const Home = {
             <div class="text-head">
                 <h2>Explore Restaurants</h2>
             </div>
-            <div class="restaurant" id="card-resto"></div>
+            <div class="restaurant" id="card-resto">
+                ${createSkeletonRestaurantTemplate()}
+            </div>
         </div>
 
         <service-content></service-content>

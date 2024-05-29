@@ -153,6 +153,16 @@ nav .nav-list li {
   padding: 10px 0;
 }
 
+.restaurant .restaurant-item .skeleton {
+  user-select: none;
+  background-color: #eeeeee;
+  color: #eeeeee;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
 .restaurant .restaurant-item{
   box-shadow: var(--card-shadow);
   border-radius: 12px;
@@ -358,11 +368,6 @@ footer ul {
   margin-left: -44px;
 }
 
-.skeleton {
-  width:100%;
-  height:100%;
-}
-
 .footer-col h3 {
   margin-top: -1px;
 }
@@ -405,6 +410,12 @@ footer .copyright {
 
 .detail-page h1 {
   font-size: 34px;
+}
+
+.detail-page .skeleton {
+  user-select: none;
+  background-color: #eeeeee;
+  color: #eeeeee;
 }
 
 .detail-content .like {
@@ -523,6 +534,7 @@ footer .copyright {
 .add_container .inputName,textarea {
   margin-bottom: 16px;
   padding: 16px;
+  font-family: "Roboto", sans-serif;
   font-size: var(--normal-text);
   outline: none;
   border: 1px solid #ddd;
@@ -653,12 +665,6 @@ footer .copyright {
   to {
     transform: rotate(360deg);
   }
-}
-
-.skeleton {
-  user-select: none;
-  background-color: #eeeeee;
-  color: #eeeeee;
 }
 
 /* section service */
