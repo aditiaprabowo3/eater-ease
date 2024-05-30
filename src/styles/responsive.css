@@ -16,7 +16,7 @@
     .hero {
       width: 100%;
       height: 500px;
-      margin: 0 auto; /* Untuk membuatnya berada di tengah */
+      margin: 0 auto; 
     }
   
     .hero .text-content h1{
