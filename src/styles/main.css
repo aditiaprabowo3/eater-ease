@@ -16,7 +16,7 @@ body {
   box-sizing: border-box;
 }
 
-/* navbar */
+/* navbar content*/
 header nav {
   padding: 0 8%;
   position: fixed;
@@ -79,7 +79,7 @@ nav .nav-list li {
   top: 10px;
 }
 
-/* hero */
+/* hero content*/
 .hero .btn a {
   text-decoration: none;
   padding: 18px 40px;
@@ -215,7 +215,7 @@ nav .nav-list li {
   margin-top: -1px; 
 }
 
-/* testimonials */
+/* testimonials content*/
 .section-testimonials {
   background-color: var(--secondary-color);
   margin-top: 140px;
@@ -259,7 +259,7 @@ nav .nav-list li {
   transition: all 0.3s ease-in;
 }
 
-/* qna */
+/* qna content*/
 .qna-section {
   margin-top: 140px;
   padding: 0 8%
@@ -320,7 +320,7 @@ nav .nav-list li {
 }
 
 
-/* footer */
+/* footer content*/
 footer .row{
   display: flex;
   justify-content: space-between;
@@ -381,6 +381,7 @@ footer .copyright {
   font-size: var(--normal-text);
 }
 
+/* detail page content */
 .detail-container {
   padding: 100px 8% 0 8%;
 }
@@ -450,10 +451,6 @@ footer .copyright {
   line-height: 44px;
 }
 
-/* .img-content .button {
- 
-} */
-
 .img-content .like_button {
   display: flex;
   justify-content: right;
@@ -481,8 +478,7 @@ footer .copyright {
   display: flex;
 }
 
-/* review section */
-
+/* review section content*/
 .review-container {
   margin-top: 54px;
 }
@@ -582,7 +578,7 @@ footer .copyright {
   border-radius: 5px;
 }
 
-/* favorite section */
+/* favorite section content*/
 .content-favorite h2{
   font-size: 34px;
 }
@@ -625,7 +621,7 @@ footer .copyright {
   border-radius: 50px;
 }
 
-/* loader */
+/* loader content*/
 
 .loading {
   position: fixed;
@@ -667,8 +663,7 @@ footer .copyright {
   }
 }
 
-/* section service */
-
+/* section service content*/
 .our-services {
   margin-top: 140px;
   padding: 0 8%;

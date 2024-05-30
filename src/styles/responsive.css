@@ -1,4 +1,4 @@
-/* media query */
+/* media query desktop*/
 @media (max-width: 1700px) {
     /* navbar */
     nav #hamburger {
@@ -76,8 +76,8 @@
     }
   }
   
-  /* Hero element ditampilkan full-width pada viewport width < 1200px */
-  @media (max-width: 992px) {
+/* media query desktop*/
+@media (max-width: 992px) {
     /* navbar */
     nav #hamburger {
       font-size: 32px;
@@ -150,8 +150,9 @@
       width: 50%;
     }
   }
-  
-  @media (max-width: 680px) {
+
+  /* media query tablet*/
+@media (max-width: 680px) {
     /* navbar */
     nav #hamburger {
       font-size: 32px;
@@ -248,8 +249,9 @@
       width: 100%;
     }
   }
-  
-  @media (max-width: 500px) {
+
+/* media query mobile*/
+@media (max-width: 500px) {
     /* navbar */
     nav #hamburger {
       font-size: 32px;
