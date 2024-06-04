@@ -8,7 +8,7 @@ class RestaurantDbSource {
         const response = await fetch(API_ENDPOINT.RESTO_LIST);
         const responseJson = await response.json();
 
-        //  Setelah mendapatkan data JSON dari respons, kita mengembalikan array restaurants yang merupakan bagian dari data JSON tersebut. Array restaurants kemudian dapat digunakan atau ditampilkan dalam aplikasi sesuai kebutuhan.
+
         return responseJson.restaurants;
     }
 
