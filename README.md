@@ -1,2 +1,2 @@
 # EaterEase
-![Screen Shot](https://github.com/aditiaprabowo3/Bookshelf-Apps/blob/main/src/public/images/img.png)
+![Screen Shot](https://github.com/aditiaprabowo3/Bookshelf-Apps/blob/main/public/images/ss.png)
