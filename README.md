@@ -6,8 +6,8 @@
 - Web Components
 - Webpack
 - PWA
-- e2e Testing
-- integration testing
+- e2e Testing ()
+- integration testing (jest)
 - CI/CD
 
 
