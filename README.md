@@ -7,7 +7,7 @@
 - Webpack
 - PWA
 - Eslint
-- e2e Testing ()
+- e2e Testing (CodeceptJS)
 - integration testing (jest)
 - CI/CD
 
