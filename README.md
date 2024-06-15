@@ -1,5 +1,5 @@
 # EaterEase
-  The technology stack used is:
+  The technolog stack used is:
 - HTML5
 - CSS
 - Javascript
