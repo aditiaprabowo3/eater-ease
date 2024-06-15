@@ -4,7 +4,7 @@ EaterEase is a website to make it easier for us when we want to find the best re
 <br>
 The tech stack used is:
 - HTML5
-- CSS
+- CSS3
 - Javascript
 - Web Components
 - Webpack
