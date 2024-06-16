@@ -1,5 +1,5 @@
 # EaterEase App
-EaterEase is a website to make it easier for us when we want to find the best restaurants around us and make it easier for us to get restaurants with high ratings
+EaterEase is a website to make it easier for us when we want to find the best restaurants around us and make it easier for us to get restaurants
 <br>
 <br>
 The tech stack used is:
