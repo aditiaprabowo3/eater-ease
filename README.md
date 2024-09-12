@@ -9,6 +9,5 @@ The tech stack used is:
 - PWA (Workbox)
 - Eslint
 - e2e Testing (CodeceptJS)
-- integration testing (jest)
-- 
+- integration testing (Jest)
 ![Screen Shot](https://github.com/aditiaprabowo3/eater-ease/blob/main/public/images/ss.png)
