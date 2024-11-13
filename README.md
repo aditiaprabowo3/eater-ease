@@ -2,7 +2,7 @@
 EaterEase is a website to make it easier for us when we want to find the best restaurants around us and make it easier for us to get restaurants
 The tech stack used is:
 - HTML
-- CSS3
+- CSS
 - Javascript
 - Web Components
 - Webpack
