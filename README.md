@@ -6,7 +6,7 @@ The tech stack used is:
 - Javascript
 - Web Components
 - Webpack
-- PWA (Workbox)
+- PWA (Workb
 - Eslint
 - e2e Testing (CodeceptJS)
 - integration testing (Jest)
